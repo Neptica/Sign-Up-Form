@@ -3,3 +3,79 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --width-of-pic: 37%;
+  --form-container: 30%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  height: 100vh;
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  height: 100vh;
+  width: var(--width-of-pic);
+}
+
+.sidebar img {
+  height: 100%;
+  width: 130%;
+}
+
+.emblem {
+  height: 15%;
+  width: 100%;
+  position: relative;
+  top: -80vh;
+}
+
+.backdrop {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+}
+
+.text {
+  color: white;
+}
+
+.form__container {
+  height: 100vh;
+  width: calc(100% - var(--width-of-pic));
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: calc((100% - var(--form-container)) / 2);
+  background-color: lightgrey;
+  opacity: 100;
+}
+
+.main {
+  height: var(--form-container);
+  background-color: white;
+}
+
+.footer {
+  height: calc((100% - var(--form-container)) / 2);
+  background-color: lightgrey;
+}
