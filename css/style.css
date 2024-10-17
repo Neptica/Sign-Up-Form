@@ -1,17 +1,33 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: top-font;
+  src: url(../art/Norse-Bold.otf);
+}
+
 :root {
-  --width-of-pic: 37%;
+  --width-of-pic: 38%;
   --form-container: 30%;
+  --padder-color: #fafbfc;
+  --button-color: #596d48;
+  --text-color: #000000;
+  /* --text-color: #010539; */
 }
 
 body {
   display: flex;
   justify-content: center;
+}
+
+p,
+h1 {
+  opacity: 0.9;
+  color: var(--text-color);
 }
 
 .container {
@@ -41,19 +57,43 @@ body {
 .backdrop {
   height: 100%;
   width: 100%;
-  background-color: black;
-  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* this allows any child elements to have full opacity without forcing inheritance */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.logo {
+.emblem img {
+  height: 80%;
+  width: 20%;
   color: white;
 }
 
 .text {
+  color: white;
+  font-size: 5rem;
+  font-family: top-font, system-ui;
+  position: relative;
+  top: 0.5rem;
+}
+
+.copyright__container {
+  color: white;
+  width: 100%;
+  position: relative;
+  top: -19vh;
+  display: flex;
+  justify-content: center;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.copyright a {
   color: white;
 }
 
@@ -65,17 +105,72 @@ body {
 }
 
 .header {
+  padding: 18% 20% 0 5%;
   height: calc((100% - var(--form-container)) / 2);
-  background-color: lightgrey;
+  background-color: var(--padder-color);
   opacity: 100;
 }
 
+.header p {
+  font-size: 1.2rem;
+}
+
 .main {
+  padding: 0 0 0 5%;
   height: var(--form-container);
   background-color: white;
 }
 
+.main h1 {
+  font-size: 1.2rem;
+  padding-top: 3%;
+}
+
+.main ul {
+  padding-top: 3%;
+}
+
 .footer {
+  padding: 4% 0 0 5%;
   height: calc((100% - var(--form-container)) / 2);
-  background-color: lightgrey;
+  background-color: var(--padder-color);
+}
+
+.footer button {
+  background-color: var(--button-color);
+  color: white;
+  font-size: 0.8rem;
+  padding: 12px 44px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer p {
+  padding: 4% 0 0 0;
+}
+
+.footer a {
+  color: var(--button-color);
+  text-decoration: none;
+}
+
+/* Form Layout */
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 8%;
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 30%;
+}
+
+li p {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
 }
