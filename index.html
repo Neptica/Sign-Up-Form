@@ -55,7 +55,7 @@
               <li>
                 <p>
                   <label for="email">EMAIL</label>
-                  <input type="email" id="email" name="first_name" />
+                  <input type="email" id="email" name="first_name" required />
                 </p>
                 <p>
                   <label for="number">PHONE NUMBER</label>
@@ -75,6 +75,7 @@
                     id="password"
                     name="passwd"
                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                    required
                   />
                 </p>
                 <p>
@@ -84,19 +85,22 @@
                     id="password"
                     name="passwd"
                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                    required
                   />
                 </p>
               </li>
             </ul>
+            <div class="submit">
+              <a href="/" id="create">
+                <button><b>Create Account</b></button>
+              </a>
+              <p id="login">Already have an account? <a href="/">Log in</a></p>
+            </div>
           </form>
         </div>
 
-        <div class="footer">
-          <a href="/">
-            <button><b>Create Account</b></button>
-          </a>
-          <p>Already have an account? <a href="/">Log in</a></p>
-        </div>
+        <!-- TODO: need to move the button inside the form for submission to work -->
+        <div class="footer"></div>
       </div>
     </div>
   </body>
