@@ -43,26 +43,43 @@
                   <input type="text" id="first" name="first_name" />
                 </p>
                 <p>
-                  <label for="email">EMAIL</label>
-                  <input type="text" id="email" name="first_name" />
-                </p>
-                <p>
-                  <label for="password">PASSWORD</label>
-                  <input type="password" id="password" name="passwd" />
+                  <label for="last">LAST NAME</label>
+                  <input type="text" id="last" name="last_name" />
                 </p>
               </li>
               <li>
                 <p>
-                  <label for="last">LAST NAME</label>
-                  <input type="text" id="last" name="last_name" />
+                  <label for="email">EMAIL</label>
+                  <input type="email" id="email" name="first_name" />
                 </p>
                 <p>
                   <label for="number">PHONE NUMBER</label>
-                  <input type="text" id="number" name="last_name" />
+                  <input
+                    type="tel"
+                    id="number"
+                    name="last_name"
+                    pattern="^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
+                  />
+                </p>
+              </li>
+              <li>
+                <p>
+                  <label for="password">PASSWORD</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="passwd"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                  />
                 </p>
                 <p>
                   <label for="password">CONFIRM PASSWORD</label>
-                  <input type="password" id="password" name="passwd" />
+                  <input
+                    type="password"
+                    id="password"
+                    name="passwd"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                  />
                 </p>
               </li>
             </ul>
@@ -70,7 +87,9 @@
         </div>
 
         <div class="footer">
-          <button><b>Create Account</b></button>
+          <a href="/">
+            <button><b>Create Account</b></button>
+          </a>
           <p>Already have an account? <a href="/">Log in</a></p>
         </div>
       </div>

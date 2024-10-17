@@ -33,7 +33,7 @@ h1 {
 
 .container {
   height: 100vh;
-  width: 75%;
+  width: 80%;
   display: flex;
   flex-direction: row;
 }
@@ -125,7 +125,7 @@ h1 {
 
 .main h1 {
   font-size: 1.2rem;
-  padding-top: 3%;
+  padding-top: 2%;
 }
 
 .main ul {
@@ -161,21 +161,21 @@ h1 {
 /* Form Layout */
 ul {
   display: flex;
-  flex-direction: row;
-  gap: 8%;
+  flex-direction: column;
+  gap: 10px;
 }
 
 ul li {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 32%;
+  flex-direction: row;
+  gap: 50px;
 }
 
 li p {
   display: flex;
   flex-direction: column;
   font-size: 0.75rem;
+  gap: 3px;
 }
 
 p input {
@@ -183,4 +183,16 @@ p input {
   padding: 0.3rem 0 0.3rem 0.45rem;
   border-radius: 5px;
   font-size: 0.8rem;
+  width: 13rem;
+  outline: none;
+  /* removes outline on focus */
+}
+
+p input:focus {
+  border: 1px solid blue;
+  box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.2);
+}
+
+p input:invalid {
+  border: 1px solid red;
 }
