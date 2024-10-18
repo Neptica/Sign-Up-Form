@@ -198,6 +198,10 @@ p input:focus {
   box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.2);
 }
 
+p input:valid {
+  border: 1px solid green;
+}
+
 p input:invalid {
   border: 1px solid red;
 }
